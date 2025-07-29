@@ -4,5 +4,6 @@ enum class PlaybackState {
     IDLE,
     LOADING,
     READY,
+    PLAYING,
     ENDED
 }
