@@ -42,55 +42,41 @@ interface MediaPlayer {
     /**
      * 트랙을 준비하고 재생
      */
-    suspend fun playTrack(track: Track)
+    fun playTrack(track: Track)
     
     /**
      * 재생 일시정지
      */
-    suspend fun pause()
+    fun pause()
     
     /**
      * 재생 재개
      */
-    suspend fun resume()
+    fun resume()
     
     /**
      * 재생 중지
      */
-    suspend fun stop()
+    fun stop()
     
     /**
      * 특정 위치로 이동 (밀리초)
      */
-    suspend fun seekTo(position: Long)
+    fun seekTo(position: Long)
     
-    /**
-     * 다음 트랙으로 이동 (플레이리스트가 있는 경우)
-     */
-    suspend fun skipToNext()
-    
-    /**
-     * 이전 트랙으로 이동 (플레이리스트가 있는 경우)
-     */
-    suspend fun skipToPrevious()
-    
-    /**
-     * 플레이리스트 설정
-     */
-    suspend fun setPlaylist(tracks: List<Track>, startIndex: Int = 0)
     
     /**
      * 볼륨 설정 (0.0f ~ 1.0f)
      */
-    suspend fun setVolume(volume: Float)
+    fun setVolume(volume: Float)
     
     /**
      * 재생 속도 설정 (0.5f ~ 2.0f)
      */
-    suspend fun setPlaybackSpeed(speed: Float)
+    fun setPlaybackSpeed(speed: Float)
     
     /**
      * 리소스 해제
      */
-    suspend fun release()
+    fun release()
 }
