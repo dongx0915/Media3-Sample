@@ -115,8 +115,8 @@ class ExoMediaPlayer(context: Context) : MediaPlayer {
         currentTrackInternal = null
     }
     
-    override fun seekTo(position: Long) {
-        exoPlayer.seekTo(position)
+    override fun seekTo(millis: Long) {
+        exoPlayer.seekTo(millis)
     }
 
     override fun setVolume(volume: Float) {
